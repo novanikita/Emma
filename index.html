@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Эмма</title>
+    <meta name="description" content="Библиотека исследования рынка голосовых агентов для продукта Эмма." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="alternate" hreflang="ru" href="https://novanikita.github.io/Emma/" />
+    <link rel="alternate" hreflang="en" href="https://novanikita.github.io/Emma/en/" />
+    <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      (function () {
+        var theme = localStorage.getItem("ids-theme");
+        if (theme === "dark" || (!theme && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="css/tokens/palette.css" />
+    <link rel="stylesheet" href="css/tokens/colors.css" />
+    <link rel="stylesheet" href="css/tokens/scales.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/page-composition/layout.css" />
+    <link rel="stylesheet" href="css/components/ids.css" />
+    <link rel="stylesheet" href="css/components/gallery.css" />
+    <link rel="stylesheet" href="css/components/navbar.css" />
+    <link rel="stylesheet" href="css/components/theme-toggle.css" />
+    <link rel="stylesheet" href="css/project.css" />
+  </head>
+
+  <body class="ids">
+    <header>
+      <button class="ids__theme-toggle" role="switch" aria-checked="false" aria-label="Тёмная тема">
+        <span class="ids__theme-toggle__track"><span class="ids__theme-toggle__thumb"></span></span>
+      </button>
+      <nav class="lang-switcher" aria-label="Язык">
+        <a href="./" aria-current="page">RU</a>
+        <a href="en/">EN</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="ids__wrapper">
+        <div class="ids__space XL"></div>
+        <div class="ids__text-width">
+          <hgroup>
+            <p>Исследование рынка голосовых агентов</p>
+            <h1>Эмма</h1>
+          </hgroup>
+          <ids-navbar></ids-navbar>
+          <p>
+            Библиотека находок для продукта, который дополнит экосистему Диптолка. Общее с Диптолком&nbsp;&mdash; речь и сигналы выше транскрипта. Эмма нацелена на разговор и на понимание одного человека, своего собеседника. Главное&nbsp;&mdash; качество разговора как процесса; решение задач следует из него.
+          </p>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <ids-nav-item id="principles" label="Принципы">
+              <h2>Принципы</h2>
+            </ids-nav-item>
+            <p>Стартовые гипотезы. Список будем уточнять по мере исследования.</p>
+            <ol>
+              <li>Можно найти маленькие стартапы, которые предлагают более качественных голосовых агентов, чем OpenAI, Claude, Gemini и другие крупные модели.</li>
+              <li>Польза Эммы&nbsp;&mdash; в эмпатии.</li>
+              <li>Польза Эммы&nbsp;&mdash; в фокусе на процессе, а не на результате.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper L">
+        <div class="section">
+          <div class="ids__space L"></div>
+          <ids-nav-item id="library" label="Библиотека">
+            <h2>Библиотека</h2>
+          </ids-nav-item>
+          <div class="ids__space S"></div>
+          <div class="library-table-wrap">
+            <table class="library-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Название</th>
+                  <th>Год</th>
+                  <th>Описание</th>
+                  <th>Преимущество</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Артефакты добавляются сюда -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper L">
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <ids-nav-item id="gallery" label="Галерея">
+              <h2>Галерея</h2>
+            </ids-nav-item>
+          </div>
+          <div class="ids__space M"></div>
+          <ids-gallery>
+            <!-- Картинки добавляются сюда -->
+          </ids-gallery>
+        </div>
+      </div>
+
+      <div class="ids__space XL"></div>
+    </main>
+
+    <script src="js/lib/photoswipe.umd.min.js"></script>
+    <script src="js/lib/photoswipe-lightbox.umd.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/theme-toggle.js"></script>
+  </body>
+</html>

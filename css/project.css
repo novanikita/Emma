@@ -1,0 +1,48 @@
+.lang-switcher {
+  position: fixed;
+  top: 0.6em;
+  right: 0.6em;
+  z-index: 1;
+  display: flex;
+  gap: 0.5em;
+  font-size: 0.8em;
+}
+
+.lang-switcher a {
+  text-decoration: none;
+  color: var(--ids__text-caption);
+}
+
+.lang-switcher a[aria-current="page"] {
+  color: var(--ids__text);
+}
+
+@media (width < 768px) {
+  .lang-switcher {
+    top: 0.4em;
+    right: calc(var(--ids__density) * 0.6rem);
+  }
+}
+
+.library-table-wrap {
+  overflow-x: auto;
+}
+
+.library-table {
+  width: 100%;
+}
+
+.library-table th:first-child,
+.library-table td:first-child {
+  font-variant-numeric: tabular-nums;
+  color: var(--ids__text-caption);
+  white-space: nowrap;
+  padding-right: 1em;
+  width: 2em;
+}
+
+.library-table th:nth-child(3),
+.library-table td:nth-child(3) {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
