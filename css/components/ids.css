@@ -266,6 +266,7 @@
   & table {
     border-spacing: 0;
     background-color: inherit;
+    font-size: 0.8em;
 
     @media (max-width: 767px) {
       font-size: 0.7em;
@@ -282,7 +283,7 @@
         position: sticky;
         top: 0px;
         text-align: left;
-        border-bottom: var(--ids__border-width-m) solid var(--ids__text);
+        border-bottom: var(--ids__border-width-s) solid var(--ids__border);
         padding-bottom: 0.3em;
         background-color: inherit;
 
@@ -293,7 +294,7 @@
 
       & td {
         padding: 0.8em 0.5em 1em 0;
-        border-bottom: var(--ids__border-width-s) solid color-mix(in srgb, var(--ids__text) 50%, transparent);
+        border-bottom: var(--ids__border-width-s) solid var(--ids__border);
         vertical-align: top;
       }
 

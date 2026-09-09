@@ -46,11 +46,14 @@
 }
 
 .library-table th:nth-child(3),
-.library-table td:nth-child(3),
+.library-table td:nth-child(3) {
+  width: 4em;
+}
+
 .library-table th:nth-child(5),
 .library-table td:nth-child(5),
-.library-table th:nth-child(7),
-.library-table td:nth-child(7) {
+.library-table th:nth-child(6),
+.library-table td:nth-child(6) {
   white-space: nowrap;
 }
 

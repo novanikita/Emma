@@ -49,7 +49,6 @@
             <p>Voice agent market research</p>
             <h1>Emma</h1>
           </hgroup>
-          <ids-navbar></ids-navbar>
           <p>
             A library of findings for a product that will complement the Diptalk ecosystem. What Emma shares with Diptalk is speech, and signals above the transcript. Emma is aimed at conversation, and at understanding one person: her interlocutor. The point is the quality of conversation as a process; solving tasks follows from that.
           </p>
@@ -71,7 +70,7 @@
         </div>
       </div>
 
-      <div class="ids__wrapper L">
+      <div class="ids__wrapper XL">
         <div class="section">
           <div class="ids__space L"></div>
           <ids-nav-item id="library" label="Library">
@@ -87,19 +86,590 @@
                   <th>Tag</th>
                   <th>Author</th>
                   <th>Date</th>
-                  <th>What happened</th>
                   <th>Source type</th>
+                  <th>What happened</th>
                   <th>Key note</th>
                 </tr>
               </thead>
               <tbody>
                 <!-- Artifacts go here -->
+                <tr>
+                  <td>1</td>
+                  <td><a href="https://techcrunch.com/2025/09/05/personalized-ai-companion-app-dot-is-shutting-down" target="_blank" rel="noopener">Dot AI companion shuts down over founders' diverging vision</a></td>
+                  <td>failure, event</td>
+                  <td>New Computer (Sam Whitmore, Jason Yuan)</td>
+                  <td>2025-09-05</td>
+                  <td>journalism</td>
+                  <td>Startup New Computer shut down Dot, a personalized AI "friend and companion" that adapted to a user's interests over time and offered emotional support. The reason wasn't money or competition, but a divergence in the founders' vision for the product ("different north stars") — they chose to close rather than compromise. It drew attention as an example of a companion product failing at the idea level rather than the technology level, and as a lesson in how fragile user attachment can be: users got a month (until October 5) to export their data, meaning people literally lost a digital companion.</td>
+                  <td>A small startup (not Big Tech). Launched in 2024, shut down about a year later. Monetization unclear at shutdown. Shows the risk of a companion product "dying" for attached users — a theme of success/failure stories and memory of the companion.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><a href="https://www.techtimes.com/articles/320525/20260715/china-ai-companion-law-takes-effect-doubao-qwen-shut-down-millions-lose-chat-data.htm" target="_blank" rel="noopener">Mass shutdown of AI companions in China after new law</a></td>
+                  <td>event, failure</td>
+                  <td>Tencent (Yuanbao), ByteDance (Doubao), Alibaba (Qwen)</td>
+                  <td>2026-07-15</td>
+                  <td>journalism</td>
+                  <td>China's first AI companion regulation took effect on July 15, 2026, prompting Tencent, ByteDance and Alibaba to remove custom AI personas and agents from Yuanbao, Doubao (345M MAU) and Qwen (166M MAU) within weeks — over 500 million users lost access to their characters. Qwen deleted chat histories with no export option, while Doubao gave a temporary window to export data until October 15. It drew attention as the largest regulatory intervention in the companion market to date, and as an illustration that "memory of the companion" is also a legal and infrastructural risk for the user.</td>
+                  <td>Not small startups but giants — yet specifically the voice/chat companion segment. Useful signal for the RU market about future regulation. Shows that user data (memory) is a vulnerable point of the product.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><a href="https://techcrunch.com/2025/03/13/sesame-the-startup-behind-the-viral-virtual-assistant-maya-releases-its-base-ai-model/" target="_blank" rel="noopener">Sesame AI: viral voice demo companions Maya/Miles and an a16z round</a></td>
+                  <td>launch, success, product</td>
+                  <td>Sesame AI (Brendan Iribe)</td>
+                  <td>2025-02-27</td>
+                  <td>journalism</td>
+                  <td>Small startup Sesame released a research demo of voice companions Maya and Miles based on its Conversational Speech Model (CSM, 1B parameters, Apache 2.0). Within weeks more than a million people talked with the bot for a combined 5 million minutes, after which Sesame closed a $47.5M Series A led by a16z and later raised further at a $1B valuation. It drew attention as an example of high-quality voice (close to crossing the uncanny valley) generating viral traction and investor interest on its own, without a finished business product — a direct hit on the hypothesis that "small startups make voice better than giants."</td>
+                  <td>Startup was small at launch. No monetization at demo stage — a pure product-research release. Model is open (Apache 2.0). Shows the gap between "wow from voice" and a sustainable business.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><a href="https://arxiv.org/abs/2605.20356" target="_blank" rel="noopener">Full-duplex spontaneous dialogue models: synchronization and turn-taking prediction</a></td>
+                  <td>research</td>
+                  <td>Pablo Riera, Pablo Brusco et al. (independent researchers, based on the Moshi model)</td>
+                  <td>2026-05-19</td>
+                  <td>science</td>
+                  <td>The paper studies how full-duplex spoken dialogue models (able to listen and speak simultaneously) synchronize internal representations during conversation, using the Moshi model. Through Centered Kernel Alignment, the authors show strong synchronization of interlocutors' representations on a clean channel (peaking near zero lag, degrading with noise), and through causal LSTMs, that the model's internal state encodes turn-switching signals in advance — the model "anticipates" the moment to take or yield the floor. A direct hit on the "speech recognition, turn-taking" criterion.</td>
+                  <td>Academic work, not a product. Shows that turn-taking is solved not by rules but by analyzing the model's hidden states — a direction useful for Emma's architecture.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><a href="https://arxiv.org/abs/2604.21406" target="_blank" rel="noopener">HumDial Challenge at ICASSP 2026: a benchmark for full-duplex dialogue systems</a></td>
+                  <td>research</td>
+                  <td>ICASSP 2026 HumDial Challenge organizers</td>
+                  <td>2026-04-25</td>
+                  <td>science</td>
+                  <td>For the Full-Duplex Interaction track of the HumDial Challenge at ICASSP 2026, organizers assembled a high-quality dataset of real two-channel human conversations annotated for interruptions, speech overlaps and backchannels (like "uh-huh," "yeah"), and built the HumDial-FDBench benchmark to evaluate the naturalness of dialogue systems. It drew attention as a rare example of standardized, reproducible evaluation specifically for turn-taking and interruptions — meaning the speech AI industry recognizes turn-taking as a distinct, still-unsolved problem requiring a common benchmark.</td>
+                  <td>Applied science at the intersection with industry (ICASSP is an engineering conference). Useful as a source of metrics for evaluating future voice agents, including Emma.</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td><a href="https://elevenlabs.io/blog/klarna" target="_blank" rel="noopener">Klarna reports 10x faster support with an ElevenLabs voice agent</a></td>
+                  <td>product, success</td>
+                  <td>ElevenLabs, Klarna</td>
+                  <td>2026-02-01</td>
+                  <td>vendor</td>
+                  <td>Klarna launched a voice agent on the ElevenAgents platform as the first line of phone support for 35 million US customers. According to both companies, the agent resolves informational requests (payment status, instructions) in low-latency conversation and hands complex cases to humans, speeding up resolution by up to 10x. It drew attention as a rare public case of a voice agent succeeding in production at mass B2C scale, not just in a demo — and as an example of a voice infrastructure vendor (not an AI giant) supplying core technology to a large business.</td>
+                  <td>A vendor's own claim about its case — no independent verification exists, so the "10x" figure should be treated with caution. ElevenLabs itself is already a large player ($500M round, $11B valuation in February 2026), but the case is telling for the scale of voice agent deployment specifically.</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><a href="https://hai.stanford.edu/news/ai-companions-may-worsen-loneliness-for-vulnerable-users-stanford-study-finds" target="_blank" rel="noopener">Stanford study: AI companions may worsen loneliness for vulnerable users</a></td>
+                  <td>research</td>
+                  <td>Stanford HAI</td>
+                  <td>2026-08-01</td>
+                  <td>science</td>
+                  <td>Stanford HAI researchers found that users with a limited social circle who turn to AI companions for emotional support end up showing lower well-being — meaning the companion doesn't replace but sometimes worsens the deficit of live social contact for the most vulnerable people. This is a direct answer to the criterion of "how people imagine talking to a machine": people expect friendship and support from AI (more than half call the companion a "friend" or "partner"), but the real effect is ambiguous.</td>
+                  <td>One of the few independent (non-vendor) scientific sources on the harm/benefit of companion products. Useful as a counterweight to the hypothesis that "Emma's value is in empathy" — empathy must be handled carefully, not as a replacement for real connections.</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/public-opinion" target="_blank" rel="noopener">AI Index 2026 (Stanford HAI): global enthusiasm for AI companions and a forecast for 2027-2040</a></td>
+                  <td>research</td>
+                  <td>Stanford HAI (AI Index)</td>
+                  <td>2026-04-01</td>
+                  <td>science</td>
+                  <td>According to AI Index 2026, on average 54% of people worldwide (52% excluding certain countries) feel enthusiastic about using AI for companionship, versus only 42% in the US; Southeast Asian countries lead (Singapore 81%, Indonesia 76%). Analysts forecast that by 2027, 10% of US adults will use an AI companion daily, rising to 30% by 2040. This is a direct, quantitative hit on the criterion of "how people imagine talking to a machine": it shows a strong gap between cultures and wariness specifically in the US market.</td>
+                  <td>A good quantitative benchmark for market language. Worth comparing separately with the RU market — this report has no Russia data yet.</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><a href="https://elevenlabs.io/blog/conversational-ai-2-0" target="_blank" rel="noopener">ElevenLabs releases Conversational AI 2.0 with a built-in turn-taking model</a></td>
+                  <td>product, launch</td>
+                  <td>ElevenLabs</td>
+                  <td>2026-01-01</td>
+                  <td>vendor</td>
+                  <td>ElevenLabs released the second version of its Conversational AI platform with a custom turn-taking model specifically designed to "understand the flow of conversation" — meaning a voice agent infrastructure vendor explicitly recognized turn-taking as a distinct engineering problem and built a dedicated model for it, rather than relying only on volume-based pauses. It also added a more expressive TTS (Eleven v3) with emotional coloring. A direct hit on two criteria at once: "speech recognition and turn-taking" and "use of emotion."</td>
+                  <td>ElevenLabs is already a large player (after a $500M round it's not quite a "small startup"), but this specific product is specialized voice infrastructure, not an LLM wrapper. Useful to look at the architectural choice (a separate turn-taking model) as a reference.</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td><a href="https://medium.com/@R.H_Rizvi/why-your-ai-voice-agent-will-fail-and-it-has-nothing-to-do-with-the-technology-e59614034794" target="_blank" rel="noopener">Why voice AI agents fail: distrust of a system you cannot interrupt</a></td>
+                  <td>opinion, failure</td>
+                  <td>independent analyst (voice AI implementation practitioner)</td>
+                  <td>2026-02-10</td>
+                  <td>opinion</td>
+                  <td>The author argues that voice agents fail in production not because of model quality but because "nobody trusts a voice they can't interrupt, correct, or escape from" — meaning the decisive factor in failure lies in turn-taking and user control over the conversation, not in ASR/TTS quality. The piece also cites a general statistic that around 70% of voice AI deployments are considered failures. It drew attention as a direct, non-vendor opinion on the cause of failures, aligning with the criteria's focus on "turn-taking" as a more important signal than pure recognition accuracy.</td>
+                  <td>Not a primary source (a practitioner's opinion, not a study); the general 70% figure needs independent verification. Useful as a hypothesis worth checking against primary data separately.</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td><a href="https://vc.ru/growth/3072868-startapy-udivivshie-venchurnyj-rynok" target="_blank" rel="noopener">RU startup Mymeet.ai raises private investment for a meeting voice-bot assistant</a></td>
+                  <td>event, launch</td>
+                  <td>Mymeet.ai</td>
+                  <td>2026-06-30</td>
+                  <td>journalism</td>
+                  <td>Russian startup Mymeet.ai, which builds a call assistant bot (connects to Zoom, Google Meet, Yandex Telemost, SberJazz, records, transcribes and produces summaries with action items), raised 16.5 million rubles from a private investor in late June 2026. The product isn't a voice companion agent per se, but it uses speech recognition and signal extraction (tasks, key points) from a live conversation — a hit on the criterion of "how products handle listening and recognizing signals." It's also a rare example of a small RU startup specifically in speech analytics, adjacent in spirit to Deeptalk.</td>
+                  <td>Small startup, RU market. The product is closer to Deeptalk (analyzing conversation text for two people) than to Emma, but useful for comparison with a neighboring niche. Round size is small — early stage.</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td><a href="https://www.tandfonline.com/doi/full/10.1080/10447318.2026.2626809" target="_blank" rel="noopener">636 Chinese users: excessive AI companion sycophancy hurts engagement more than it helps</a></td>
+                  <td>research</td>
+                  <td>academic authors (International Journal of Human-Computer Interaction)</td>
+                  <td>2026-02-01</td>
+                  <td>science</td>
+                  <td>A study of 636 respondents in China examined how sycophancy and emotional mimicry by an AI companion affect users' intention to continue using the product and their social well-being. Result: companions with low sycophancy provide users with better social support, which in turn increases both continued-use intention and well-being — meaning excessive agreeableness hurts long-term attachment, contrary to the intuition that "the softer the agent, the more pleasant it is." A direct hit on the "use of emotion" criterion and on Emma's empathy hypothesis — it shows that empathy is not the same as agreeing with the user.</td>
+                  <td>Peer-reviewed journal, sample size stated. Directly relevant to hypothesis #2 (Emma's value is in empathy) — worth distinguishing empathy from sycophancy when formulating product principles.</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td><a href="https://www.voiceaispace.com/news/voice-ai-news-2026-07-20-aeps" target="_blank" rel="noopener">Rime raises $24M Series A for an enterprise speech-to-speech model</a></td>
+                  <td>event, launch, product</td>
+                  <td>Rime (Lily Clifford, Brook Larson, Ares Geovanos)</td>
+                  <td>2026-07-15</td>
+                  <td>journalism</td>
+                  <td>Small startup Rime (founded 2022) raised a $24M Series A from M13, with Twilio Ventures, Corazon Capital and Unusual Ventures participating, to build its own enterprise speech-to-speech model — not a wrapper over someone else's ASR/LLM/TTS, but a model trained on its own conversational dataset. Rime already serves nearly 100 million phone calls a month for Mayo Clinic, Dialpad, Upstart and Asurion; former Meta Superintelligence Lab audio research lead Rafael Valle joined as Chief Science Officer. It drew attention as an example of a small niche voice-infrastructure startup (tracked via VoiceAISpace's weekly digest — a layer-1 source) betting on its own model instead of a composite architecture — a direct hit on the hypothesis that "small startups make voice better than giants."</td>
+                  <td>Small startup, already in production (100M calls/month, not a demo). Monetization is B2B/enterprise subscription for voice infrastructure. Hiring a star audio researcher away from Meta signals the market is investing specifically in voice quality, not just LLM wrapping.</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td><a href="https://www.voiceaispace.com/news/voice-ai-news-2026-07-20-aeps" target="_blank" rel="noopener">Meta patents a device that listens to your voice all day and analyzes emotion</a></td>
+                  <td>event, opinion</td>
+                  <td>Meta</td>
+                  <td>2026-07-02</td>
+                  <td>journalism</td>
+                  <td>Meta published a patent (filed December 2025) for a wearable device that continuously records the user's voice and uses ML to infer emotional state from tone, pitch, speech rate, sighs and laughter, cross-referencing it with time, location, medication intake and surrounding objects. The officially stated purpose is workout recommendations and posture correction, but of the patent's 20 claims, three independent claims relate specifically to emotional analysis on its own, while fitness appears only in dependent claims. It drew attention as a direct hit on the "use of emotion" criterion in its most alarming form — constant listening for the sake of an emotional profile — and as material for the question of "how people imagine talking to (or being watched by) a machine": the patent triggered a wave of surveillance criticism rather than care.</td>
+                  <td>A giant, not a startup. No shipped product — only a patent filing (Meta itself stresses patents don't guarantee implementation). Since 2025 the EU AI Act already bans emotion recognition in workplaces and schools (fines up to 7% of revenue) — legal context for any emotion-detection product, including Emma.</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td><a href="https://www.voiceaispace.com/news/voice-ai-news-2026-05-25-cz0n" target="_blank" rel="noopener">Arc raises $10.76M seed for drive-through voice AI with 95% autonomous orders</a></td>
+                  <td>launch, success, product</td>
+                  <td>Arc (Mike McLennan, Ali Hussain)</td>
+                  <td>2026-05-26</td>
+                  <td>journalism</td>
+                  <td>Small startup Arc, founded by Square and Cash App veterans, raised a $10.76M seed from a16z for a voice agent built specifically for drive-through — the only voice platform with "e-commerce-grade" optimization purpose-built for the pickup window. According to the company, the system completes an order autonomously more than 95% of the time and lifts average check size by 4-5% through upselling; it already runs at two large fast-food chains. It drew attention as an example of sustained progress precisely where voice AI has long and visibly failed (drive-through is a classic failure story in Voicebot.ai's 2010s-2020s archive), and because the task requires handling noise, interruptions and order changes in real time — a direct hit on the "speech recognition, turn-taking" criterion.</td>
+                  <td>Small startup, early stage (seed). The market is roughly 200,000 US drive-through locations, and drive-through generates 70-75% of QSR revenue. The figures (95%, +4-5%) are company claims with no independent verification.</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td><a href="https://www.voiceaispace.com/news/voice-ai-news-2026-06-22" target="_blank" rel="noopener">Bland raises $50M Series C after being turned down by 180 investors</a></td>
+                  <td>success, event</td>
+                  <td>Bland</td>
+                  <td>2026-06-16</td>
+                  <td>journalism</td>
+                  <td>Startup Bland (founded 2023) raised a $50M Series C from Dell Technologies Capital, with HubSpot Ventures and others participating, bringing its total raised past $100M — yet 180 investors had turned the company down before this round. Bland builds call, SMS and chat agents on its own voice models (not on top of a third-party foundation model with short scripts), handling more than 3.5 million calls a week where a typical conversation runs 30-45 minutes and often unfolds unpredictably and non-linearly. It drew attention as a rare public "near-failure" story (180 rejections) on the way to a small startup's success, and as an example of a product designed specifically for a complex, long, live turn-taking exchange rather than short FAQ scripts.</td>
+                  <td>Small-to-mid startup (Y Combinator, under 3 years old). Monetization is enterprise, regulated industries. The "180 rejections" story is a good counterweight to the narrative that "money finds good technology on its own."</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td><a href="https://www.voiceaispace.com/news/voice-ai-news-2026-06-22" target="_blank" rel="noopener">India's Sarvam AI becomes a unicorn on multilingual voice models</a></td>
+                  <td>event, success</td>
+                  <td>Sarvam AI (Vivek Raghavan, Pratyush Kumar)</td>
+                  <td>2026-06-15</td>
+                  <td>journalism</td>
+                  <td>Indian startup Sarvam AI raised $234M (led by HCLTech, $150M) at a $1.5B valuation, becoming India's newest unicorn. The company builds sovereign multilingual models, including voice interfaces tailored to Indian languages, culture and low-cost hardware: its Samvaad voice agent for consumer lending is already used by Tata Capital, and its voice technology has been deployed in government initiatives reaching millions of farmers and policyholders. It drew attention as an example of a small startup outside Silicon Valley winning specifically on voice language diversity — a direct hit on the "language of the market" criterion, and a counterexample to the hypothesis that quality voice AI is the prerogative of English-speaking giants only.</td>
+                  <td>Startup founded in 2023, now a unicorn — a rare fast success outside the US/China. Monetization is B2G and B2B (banks, public sector). Worth comparing with the RU market: a similar "sovereign" voice-AI-for-local-language logic.</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td><a href="https://www.thestreet.com/technology/ai-voice-cloning-firm-collapses-lovo-in-chapter-7-bankruptcy" target="_blank" rel="noopener">Lovo AI goes bankrupt (Chapter 7) amid a voice actors' voice-cloning lawsuit</a></td>
+                  <td>failure, event</td>
+                  <td>Lovo Inc.</td>
+                  <td>2026-05-27</td>
+                  <td>journalism</td>
+                  <td>Generative voiceover company Lovo filed for Chapter 7 bankruptcy (liquidation) less than three weeks before a hearing in a lawsuit by voice actors Paul Skye Lehrman and Linnea Sage, who alleged their voices were cloned without consent from 2019-2020 recordings. The lawsuit had survived a partial dismissal (meaning the plaintiffs still had a real chance), but instead of continuing to defend itself, the company chose liquidation — a judge stayed the case on June 11 due to the bankruptcy. It drew attention as a rare public failure story of a voice AI startup collapsing not because of the technology but because of legal/ethical risk (consent for voice cloning) — a direct warning for any product that works with someone else's voice or data about a conversation partner.</td>
+                  <td>A small company that shut down via liquidation, not M&amp;A. Illustrates the legal risk voice startups face around consent and voice IP — a theme adjacent to "memory of the companion" (whose data, whose consent to use it).</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td><a href="https://www.cambridge.org/core/journals/acta-neuropsychiatrica/article/when-artificial-intelligence-speaks-psychologically-adverse-effects-of-the-shift-from-text-to-voicebased-chatbots/8BF48E1A5D1EDE86F86EF95919FBF2FB" target="_blank" rel="noopener">Psychiatrists: the shift from text chatbots to voice ones amplifies psychological risk</a></td>
+                  <td>research, opinion</td>
+                  <td>Marc Augustin, Søren Dinesen Østergaard (Acta Neuropsychiatrica)</td>
+                  <td>2026-02-13</td>
+                  <td>science</td>
+                  <td>Psychiatrists Marc Augustin and Søren Dinesen Østergaard argue in an editorial that the industry's shift from text to voice chatbots removes text's natural cognitive barrier (symbolic processing forces a pause and reconsideration) and activates "something deeper and more ancient than literacy" — tone, rhythm, emotional intonation — making parasocial attachment and delusional states more likely specifically with voice interlocutors. The authors cite OpenAI research showing users spend significantly more time with ChatGPT's voice mode than its text mode, correlating with less socializing with real people. A direct hit on the "use of emotion" and "how people imagine talking to a machine" criteria — voice isn't perceived as an interface but as something far closer to human.</td>
+                  <td>Peer-reviewed journal, but this is an editorial/expert opinion piece, not an empirical RCT. A direct caution against the unqualified hypothesis that "Emma's value is in empathy" — an empathetic voice is physiologically more persuasive than text, and therefore riskier if miscalibrated.</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td><a href="https://www.producthunt.com/products/calling-clones" target="_blank" rel="noopener">Calling Clones: a small voice experiment to "call your future self"</a></td>
+                  <td>product, opinion</td>
+                  <td>Javi Fandos (independent developer, built on Vapi infrastructure)</td>
+                  <td>2025-06-18</td>
+                  <td>user</td>
+                  <td>An independent developer released Calling Clones, a voice app that lets you call an alternate version of yourself — primarily a "future self" — to interrupt impulsive behavior through conversation with a more mature, calmer version of you; a second iteration in spring 2026 expanded the idea into a "team of clones" ("build a clone team — you'll never be alone"). The author describes it not as a productivity tool but as a ritual for emotional clarity and behavior change through voice conversation. A direct, literal hit on the "how people imagine talking to a machine" criterion — here it is literally a conversation with an imagined version of yourself, not with an "assistant."</td>
+                  <td>A very small actor (a single developer on Vapi's no-code/low-code infrastructure). Monetization is unclear; the product is more a demonstration of an idea. Useful as a raw, non-corporate image of future conversation with AI — a niche adjacent to companion products, but specifically about self-talk rather than an assistant.</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank" rel="noopener">OpenAI releases GPT-Realtime-2, its first voice model with GPT-5-level reasoning</a></td>
+                  <td>product, launch</td>
+                  <td>OpenAI</td>
+                  <td>2026-05-08</td>
+                  <td>vendor</td>
+                  <td>OpenAI released three new audio models in its Realtime API: GPT-Realtime-2, its first speech model with GPT-5-level reasoning, able to handle more complex requests and carry a conversation forward naturally; GPT-Realtime-Translate (live speech translation from 70+ languages into 13); and GPT-Realtime-Whisper (real-time streaming transcription). GPT-Realtime-2 runs with a 128k-token context window, supports an adjustable reasoning "effort" level, and scored 96.6% on the Big Bench Audio benchmark at maximum effort (+15.2 points over the previous version). It drew attention as a primary statement from one of the leading labs that "reasoning" and "real-time conversation" are ceasing to be separate architectures — a direct hit within the primary-source (layer 4) scope on voice.</td>
+                  <td>Not a startup — a giant — but the primary source matters as a marker of the industry's "ceiling," which startups like Rime and Bland measure themselves against. Version 2.1 shipped in July 2026 with more robust interruption handling and 25% lower p95 latency — meaning turn-taking is explicitly named a work area even for the top model.</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td><a href="https://deepmind.google/models/gemini-audio/speech-generation/" target="_blank" rel="noopener">Google DeepMind releases Gemini 3.1 Flash TTS with line-by-line emotion control via inline tags</a></td>
+                  <td>product, launch</td>
+                  <td>Google DeepMind</td>
+                  <td>2026-04-15</td>
+                  <td>vendor</td>
+                  <td>DeepMind released Gemini 3.1 Flash TTS in preview with more than 200 inline tags to control voice style, tone, pace and accent directly within text (e.g. [whispers], [cheerful], [pause=1.0]), support for 70+ languages, and native multi-speaker dialogue; the model placed second on the Artificial Analysis TTS leaderboard. Every audio clip is watermarked with SynthID. It drew attention as a primary statement from a lab that voice's emotional expressiveness is becoming a controllable, programmable parameter at the phrase level rather than a model side effect — a direct hit on the "use of emotion" criterion (in its broad sense of expressive TTS).</td>
+                  <td>A giant, not a startup. Product is in preview status, not full production. Useful as a reference architecture of "explicit emotion control via tags" versus "the model guesses the emotion itself" — different approaches worth comparing for Emma.</td>
+                </tr>
+                <tr>
+                  <td>23</td>
+                  <td><a href="https://www.microsoft.com/en-us/research/publication/llms-get-lost-in-multi-turn-conversation/" target="_blank" rel="noopener">Microsoft Research: LLMs "get lost" in multi-turn conversation — a 39% quality drop</a></td>
+                  <td>research</td>
+                  <td>Philippe Laban, Hiroaki Hayashi, Yingbo Zhou, Jennifer Neville (Microsoft Research, with Salesforce Research)</td>
+                  <td>2025-05-09</td>
+                  <td>science</td>
+                  <td>Large-scale simulations showed that every top open and closed LLM tested performs significantly worse in multi-turn conversations than in single-turn ones — a 39% average drop across six generation tasks; if a model makes a wrong assumption early in a conversation, it over-commits to it and fails to recover ("gets lost and does not recover"). The work won a Best Paper Award at ICLR 2026. It drew attention as direct research into conversation quality as a process rather than a single correct answer — exactly what Emma's thesis focuses on: sustaining a conversation matters more than solving a task, and here today's models are shown to be specifically weak at sustaining multi-turn conversation.</td>
+                  <td>A primary source from one of the labs (Microsoft Research), with Salesforce Research. Not about voice directly (text LLMs), but directly about the dialogue mechanics that Emma's voice layer inherits. Useful as an argument for an architecture that explicitly tracks and can revise earlier assumptions made in a conversation.</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td><a href="https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/" target="_blank" rel="noopener">Claude Voice Mode gets Opus/Sonnet and email/calendar access, but deliberately stays turn-based, not full-duplex</a></td>
+                  <td>product, launch</td>
+                  <td>Anthropic</td>
+                  <td>2026-07-23</td>
+                  <td>journalism</td>
+                  <td>Anthropic expanded Claude's voice mode from the single Haiku model available at launch to a choice between Haiku, Sonnet and Opus mid-conversation, gave voice access to connected tools (Gmail, Google Calendar, Slack, Canva, Notion), and added more languages (10, including Hindi and Indonesian). At the same time, according to independent breakdowns of the update, Claude still listens, pauses to process, and responds in turn rather than using continuous, interruptible audio (full-duplex) — meaning Anthropic deliberately did not follow the "natural" interruption path that ElevenLabs and OpenAI tout. It drew attention as a direct hit on the "speech recognition, turn-taking" criterion: one of the leading labs explicitly chose a conservative turn-based architecture for tool-use reliability rather than imitating live interruption.</td>
+                  <td>A giant, not a startup, but the architectural choice is instructive for Emma: turn-based is easier to integrate with tools and memory, full-duplex feels more natural for pure conversation — an explicit trade-off worth keeping in mind.</td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td><a href="https://venturebeat.com/orchestration/everything-in-voice-ai-just-changed-how-enterprise-ai-builders-can-benefit" target="_blank" rel="noopener">Voice AI hits an inflection point: latency, fluidity, efficiency, emotion</a></td>
+                  <td>event, product</td>
+                  <td>Inworld AI / FlashLabs / Nvidia / Alibaba Qwen / Hume AI (VentureBeat roundup)</td>
+                  <td>2026-01-22</td>
+                  <td>journalism</td>
+                  <td>VentureBeat notes that within a few weeks voice AI solved four problems long considered unsolvable: latency, speech fluidity, efficiency, and emotional understanding. Inworld shipped TTS 1.5 with under-120ms latency, FlashLabs released Chroma 1.0, an open end-to-end real-time model (Apache 2.0), Nvidia released PersonaPlex, a 7B-parameter full-duplex model that updates its internal state while the user is still speaking and can backchannel ("uh-huh", "yeah") like a live operator, and Alibaba Qwen released Qwen3-TTS with a 12 Hz tokenizer for cheap inference. Google DeepMind struck a strategic deal with Hume AI for access to emotionally labeled speech data. It drew attention because "open weights" and full-duplex became available to small teams at the same time, not just to giants — lowering the barrier to entry for startups like the ones covered in the cards below.</td>
+                  <td>Open licenses (Apache 2.0, MIT) on Chroma and Qwen3-TTS let enterprises self-host the models — competitive pressure on closed APIs. Quote from the piece: "Emotion isn't a feature; it's a foundation" — on Hume AI's bet that emotional data is an asset. Demo/prod status: some models (Qwen3-TTS, Chroma) are already publicly available; PersonaPlex is an open-weights release.</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td><a href="https://spectrum.ieee.org/proactive-ai-hearing-devices" target="_blank" rel="noopener">University of Washington teaches a hearing aid to infer the conversation partner from turn-taking rhythm</a></td>
+                  <td>research, product</td>
+                  <td>Mobile Intelligence Lab, University of Washington (led by Shyam Gollakota)</td>
+                  <td>2025-12-08</td>
+                  <td>journalism</td>
+                  <td>A "proactive" hearing aid prototype figures out on its own which of several voices in a noisy environment the wearer is talking to, and amplifies only that voice — with no manual selection. The system uses the wearer's own voice as an anchor and uses the natural back-and-forth of turn-taking rhythm to distinguish the conversation partner from other voices, suppressing ones with excessive overlap. The architecture is two-tiered: a slow model analyzes dialogue dynamics once a second, while a fast model instantly isolates the partner's voice, with under-10ms latency. It drew attention for directly engineering the "turn-taking" signal as a way to work out who is who in a conversation — the same core capability a voice agent needs to recognize dialogue structure.</td>
+                  <td>Partner-identification accuracy of 80-92%, false positives of 1.5-2.2%, speech intelligibility improvement of up to 14.6 dB. The method generalizes across languages (English, Mandarin, untrained Japanese) — meaning the turn-taking signal is universal and not tied to a specific language. Stage: lab prototype, not a product.</td>
+                </tr>
+                <tr>
+                  <td>27</td>
+                  <td><a href="https://spectrum.ieee.org/audio-deepfake-fix" target="_blank" rel="noopener">"AI voices should sound robotic again" — a proposal to make talking to a machine unmistakably recognizable</a></td>
+                  <td>opinion</td>
+                  <td>Barath Raghavan (Fastly, USC), Bruce Schneier (Harvard Kennedy School)</td>
+                  <td>2025-01-30</td>
+                  <td>journalism</td>
+                  <td>The authors propose a mandatory standard — applying a ring modulator (30-80 Hz, at least 20% amplitude) to all synthesized AI voices so they sound recognizably "robotic" and a person always knows they're talking to a machine. Their argument: "a human can be a friend, an AI cannot be a friend," and increasingly human-like voices combined with cloning create a risk of deception. It drew attention as a direct answer to the criterion "how people imagine talking to a machine" — the authors argue people need not an illusion of humanity but an honest marker of machineness baked directly into the sound of the voice.</td>
+                  <td>A technically simple fix (the authors demonstrated a proof-of-concept with a 50-line Python script over a NotebookLM podcast) that doesn't affect speech intelligibility. The position sharply diverges from the industry trend (Sesame, ElevenLabs, etc.) toward maximally human-like voice — a good counterpoint for the discussion of Emma's empathy: where the line falls between a "warm" voice and a "deceptive" one.</td>
+                </tr>
+                <tr>
+                  <td>28</td>
+                  <td><a href="https://habr.com/ru/articles/1044882/" target="_blank" rel="noopener">How a TTS engine was chosen for a voice AI assistant: criteria instead of hype</a></td>
+                  <td>product</td>
+                  <td>targetai</td>
+                  <td>2026-06-08</td>
+                  <td>vendor</td>
+                  <td>Russian company targetai describes its practice for choosing a TTS engine for a voice AI assistant: instead of a subjective "like it or not" judgment of the voice, it introduces a set of measurable criteria, including time-to-first-audio — how quickly the agent physically starts speaking after receiving text from the LLM. It drew attention as a rare example of an applied methodology for evaluating TTS specifically for a voice agent (rather than for audiobooks or podcasts), where the decisive factor turns out to be not timbre quality but the delay before speech starts — i.e., the feeling of a live conversation.</td>
+                  <td>Market language is Russian; a mid-sized vendor (B2B solutions for voice AI assistants). Demonstrates that for the perceived "naturalness" of a dialogue, an engineering latency metric can matter more than voice quality itself.</td>
+                </tr>
+                <tr>
+                  <td>29</td>
+                  <td><a href="https://habr.com/ru/articles/1072110/" target="_blank" rel="noopener">"Did the caller go silent or just pause to think?": how a contact center cut AI-assistant interruptions from 14% to 3.2%</a></td>
+                  <td>product, success</td>
+                  <td>outsourced contact center (engineer, handle Innesiya)</td>
+                  <td>2026-08-19</td>
+                  <td>vendor</td>
+                  <td>An engineering team at an outsourced contact center describes how they taught their own voice stack to tell a customer's thinking pause apart from the end of an utterance. Key thesis: "acoustics doesn't know whether a person has finished a thought — the text does." Simple timeouts didn't work: short ones cut the customer off, long ones created awkward silence. The solution was a four-layer pipeline: a fast acoustic silence detector + incremental ASR with intermediate hypotheses + an utterance-completeness classifier built on rubert-tiny2 (29M parameters) + an adaptive timeout based on completion probability. It was trained on roughly 12,000 phone dialogues with 40,000 labeled turn boundaries, annotated based on live operators' behavior. It drew attention as one of the most concrete RU-market stories specifically about turn-taking recognition, with clear before/after numbers.</td>
+                  <td>Results: premature speech interruptions dropped from 14% to 3.2%, average response latency fell from 1200ms to 480ms, and the share of calls escalated to a live operator due to a bot failure fell from 27% to 16%. Evidence level: production, real phone traffic, not a demo. Market language is Russian; a mid-sized contact center.</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td><a href="https://www.tadviser.ru/index.php/Статья:Тенденции_развития_технологий_искусственного_интеллекта_в_России._Обзор_TAdviser_2026" target="_blank" rel="noopener">TAdviser: voice emotion recognition (SER/FER) in Russia is stuck in pilots</a></td>
+                  <td>research, opinion</td>
+                  <td>TAdviser (analytical review)</td>
+                  <td>2026-07-28</td>
+                  <td>analyst</td>
+                  <td>TAdviser's annual review calls classic voice/text bots, OCR+ML, and speech analytics a mature class of solutions already built into industrial deployment roadmaps. Separately, it flags technologies still stuck at the pilot stage: voice avatars with video, emotion recognition from voice and face (SER, FER), multimodal interfaces (voice+video+AR), voice biometrics, and realistic speech synthesis — all in demand from businesses but not yet widely deployed. It drew attention as a direct answer to the "use of emotion" criterion: the market clearly separates emotion recognition from the rest of speech analytics and considers it immature even where the rest of voice-agent infrastructure is already in production.</td>
+                  <td>Market language is Russian/Russian B2B. A useful boundary for Emma: "emotion" is precisely the spot in the market with the lowest actual maturity — a potential area of differentiation rather than an already-solved problem.</td>
+                </tr>
+                <tr>
+                  <td>31</td>
+                  <td><a href="https://www.tadviser.ru/index.php/Статья:Умные_речевые_сервисы" target="_blank" rel="noopener">Global speech analytics market grows to $4.31 billion in a year</a></td>
+                  <td>event</td>
+                  <td>Meticulous Research (analysis), published by TAdviser</td>
+                  <td>2026-03-31</td>
+                  <td>analyst</td>
+                  <td>According to Meticulous Research figures cited by TAdviser, the global speech analytics software market grew to $4.31 billion and continues growing at 17.2% a year — a highly competitive but already fairly mature B2B segment (contact centers, compliance, sales). It drew attention as a quantitative frame for understanding how much "listening to and analyzing speech" is already monetized separately from voice agents as such — giving Emma something to compare against in terms of market scale.</td>
+                  <td>The market estimate comes from an independent analytics firm, not a vendor press release. Useful as a monetization benchmark: speech analytics isn't a hype segment, just a steadily growing line item of infrastructure B2B spend.</td>
+                </tr>
+                <tr>
+                  <td>32</td>
+                  <td><a href="https://www.youtube.com/watch?v=YnHy7JAVyNw" target="_blank" rel="noopener">Latent Space: voice agent builders converge on cascaded architecture, not speech-to-speech</a></td>
+                  <td>opinion, product</td>
+                  <td>Vapi, Decagon, Retell, Smallest AI, Exaflop Labs (Latent Space panel, hosted by swyx)</td>
+                  <td>2026-08-25</td>
+                  <td>journalism</td>
+                  <td>On a panel of the Latent Space podcast titled "Forward Deployed: Voice AI on what works in 2026," founders and engineers from small voice startups (Vapi, Decagon, Retell, Smallest AI) converge on one view: in production, monolithic speech-to-speech models don't win — cascaded pipelines (STT → LLM → TTS) do, because only a cascade lets you insert a supervisor model that catches prompt injection and social engineering before the agent reacts. The trade-off between "intelligence" and latency is named the category's central engineering problem; the winners are the teams that learned to parallelize the pipeline and offload work to specialized sub-agents. The panel also notes that voice agents are roughly a generation ahead of coding agents in solving context and reliability problems. It drew attention as a direct, first-hand cross-section of best practices from small voice startups specifically — exactly what this research batch was assembled to capture.</td>
+                  <td>The participants aren't giants but small/mid-size startups (seed-Series B) already serving real customers (Decagon, Vapi, Retell are B2B support voice agents). This is a counterargument to the "small startups beat Big Tech via speech-to-speech" hypothesis: in practice, the industry chooses the less "magical" but more controllable cascade.</td>
+                </tr>
+                <tr>
+                  <td>33</td>
+                  <td><a href="https://www.deeplearning.ai/the-batch/tag/apr-03-2026/" target="_blank" rel="noopener">The Batch: voice interfaces are underrated as an accessibility channel</a></td>
+                  <td>opinion</td>
+                  <td>Andrew Ng, DeepLearning.AI</td>
+                  <td>2026-04-03</td>
+                  <td>analyst</td>
+                  <td>Andrew Ng writes that conversational voice AI is improving fast, but most people still don't grasp how ubiquitous voice interfaces will become — because for the vast majority of people on the planet, speaking and listening is physically easier than writing and reading. As voice UI reliability grows, this opens up AI access to huge numbers of people for whom a text interface was a barrier (low literacy, motor limitations, hands/eyes occupied situationally). It drew attention as a direct answer to "how people imagine talking to a machine": not as a chat alternative for tech enthusiasts, but as an accessibility channel for people for whom chat is inherently inconvenient.</td>
+                  <td>The view of an influential commentator whose profile isn't voice-specific (Ng comes more from ML/education) — meaning this isn't vendor hype but a look at voice as the next big interface from the wider AI industry.</td>
+                </tr>
+                <tr>
+                  <td>34</td>
+                  <td><a href="https://arxiv.org/pdf/2601.19922" target="_blank" rel="noopener">HEART: a benchmark that compares AI to humans in face-to-face emotional support</a></td>
+                  <td>research</td>
+                  <td>Laya Iyer, Kriti Aggarwal, Sanmi Koyejo, Gail Heyman, Desmond C. Ong, Subhabrata Mukherjee</td>
+                  <td>2026-01-09</td>
+                  <td>science</td>
+                  <td>HEART is the first benchmark to directly compare humans and LLMs on the same multi-turn emotional-support dialogues, scored by both human judges and AI judges on a scientifically grounded rubric across five dimensions: alignment with human reactions, empathic response, attunement, resonance, and task adherence. Several top LLMs approach or exceed the average human on perceived empathy and consistency, but humans retain an edge in adaptive reframing, naming tension, and subtle shifts in tone — especially on "hard" turns. Agreement between human and AI judges reaches about 80%, comparable to agreement between humans themselves. It drew attention as a direct measurement of exactly where AI is already "more empathetic than average" and where humans remain irreplaceable — precisely the line the "Emma's value is in empathy" hypothesis is built around.</td>
+                  <td>Scoring was done in parallel by both humans and LLM judges — unusual methodological rigor for the topic of emotion. Stage: preprint/benchmark, not a product.</td>
+                </tr>
+                <tr>
+                  <td>35</td>
+                  <td><a href="https://arxiv.org/abs/2510.22610" target="_blank" rel="noopener">"Everything Counts": people change how they speak knowing a voice agent might react to anything</a></td>
+                  <td>research</td>
+                  <td>Damien Rudaz, Mathias Broth, Jakub Mlynar</td>
+                  <td>2025-10-26</td>
+                  <td>science</td>
+                  <td>The study analyzes recordings of real human interactions with voice agents (comparing older rule-based systems and modern LLM agents) and introduces the concept of "omnirelevance" of human speech for an agent — the constant possibility that the agent might mistakenly react to any utterance, even one not addressed to it. The authors show this produces specific speech practices in people — ways of talking so as not to "accidentally" trigger the agent — and ask whether this wariness has intensified as modern speech recognition systems have improved. It drew attention as a direct study of "how people imagine talking to a machine": not as a partner, but as a constantly eavesdropping observer around which one has to carefully phrase one's own speech.</td>
+                  <td>Field: human-computer interaction (conversation analysis), a qualitative methodology on naturalistic data rather than a lab experiment. Fits well with Emma's hypothesis about "conversation quality as a process": if a user is afraid of accidentally triggering the agent, that undermines the conversation process itself before the agent has said anything.</td>
+                </tr>
+                <tr>
+                  <td>36</td>
+                  <td><a href="https://livekit.com/blog/adaptive-interruption-handling" target="_blank" rel="noopener">LiveKit taught its agent to tell an interruption from a "mm-hmm"</a></td>
+                  <td>product</td>
+                  <td>LiveKit</td>
+                  <td>2026-03-19</td>
+                  <td>vendor</td>
+                  <td>LiveKit released Adaptive Interruption Handling — a specialized ML model that, within the first ~200-300 ms of a user's speech, distinguishes a genuine intent to interrupt from backchannels ("mm-hmm," "yeah"), sighs, coughs, and background noise. The model analyzes the waveform shape, the sharpness of speech onset, and prosody (pitch, rhythm), was trained on hundreds of hours of human dialogue, and generalizes to languages absent from the training set. Before this, ordinary VAD reacted to any sound, which made voice agents feel "jittery and robotic" — it drew attention as a direct hit on the signal-detection problem, not just voice detection.</td>
+                  <td>Metrics: 86% precision, 100% recall, faster than classic VAD in 64% of cases. Included free for all agents on LiveKit Cloud (production, not a demo).</td>
+                </tr>
+                <tr>
+                  <td>37</td>
+                  <td><a href="https://livekit.com/blog/solving-end-of-turn-detection" target="_blank" rel="noopener">LiveKit Turn Detector v1.0: ending a turn by sound, not transcript</a></td>
+                  <td>product, research</td>
+                  <td>LiveKit</td>
+                  <td>2026-06-17</td>
+                  <td>vendor</td>
+                  <td>LiveKit released an end-of-turn detection model that analyzes raw audio directly, bypassing the wait for a transcript — removing STT latency from the "speak or wait" decision chain. The architecture has two branches: a semantic branch (audio encoder + language model, understands what was said) and an acoustic branch (timing, prosody), merged in a single fusion module. LiveKit also published an open eot-bench benchmark on GitHub/Hugging Face — a rare case of a voice-infrastructure vendor publishing independently verifiable turn-taking metrics.</td>
+                  <td>At a 300 ms latency budget: 9.9% false speech cutoffs versus 12.9% for Deepgram Flux and 27.7% for ultraVAD; at 600 ms: 4.5% versus 5.5% for Soniox. Supports 14 languages. Shows an industry shift from "wait N milliseconds of silence" toward understanding the meaning of a turn in real time.</td>
+                </tr>
+                <tr>
+                  <td>38</td>
+                  <td><a href="https://www.daily.co/blog/announcing-pipecat-phonellm-alpha-1/" target="_blank" rel="noopener">Pipecat released a small open LLM built specifically for voice agents</a></td>
+                  <td>product, launch</td>
+                  <td>Daily / Pipecat</td>
+                  <td>2026-08-27</td>
+                  <td>vendor</td>
+                  <td>Daily released PhoneLLM Alpha 1 — a compact (3.5B active parameters, mixture-of-experts built on NVIDIA Nemotron 3 Nano) open model trained specifically for voice agents in call centers (finance, healthcare, retail, hospitality). It addresses the market's two main engineering pain points: excessive latency in general-purpose LLMs and unreliable tool calling across long multi-turn conversations. It drew attention as an example of infrastructure for small voice startups getting cheaper and more open-source rather than consolidating around big labs.</td>
+                  <td>Per the developers' own claims — on par with GPT-5.6 Terra, but 94% cheaper and with a P95 time-to-first-token of ~600 ms (1300 ms faster). BSD license with no commercial restrictions, deployable on your own infrastructure. There is a separate PhoneBench v1 benchmark scored via LLM judges.</td>
+                </tr>
+                <tr>
+                  <td>39</td>
+                  <td><a href="https://www.assemblyai.com/blog/voice-ai-in-2026-series-1" target="_blank" rel="noopener">AssemblyAI: mapping the money and the companies in voice AI in 2026</a></td>
+                  <td>research</td>
+                  <td>AssemblyAI (Kelsey Foster)</td>
+                  <td>2026-02-11</td>
+                  <td>vendor</td>
+                  <td>An AssemblyAI overview of the voice AI market: venture investment in the sector grew from ~$315M in 2022 to $2.1B in 2024 (a 7x increase in two years), and the voice AI agent market is projected to grow from $2.4B (2024) to $47.5B (2034). Specific players are discussed: PolyAI closed a Series D of $86M in December 2025 (valuation $750M, 2,000+ live deployments across 45 languages and 25+ countries), and Retell AI launched "Retell Assure" — automated call quality control at a volume of 40M+ calls a month.</td>
+                  <td>97% of surveyed companies have already adopted voice AI, 67% consider it "fundamental" to their operations. Five named trends: accuracy has become table stakes rather than a differentiator; vertical specialization is beating generic solutions; a "vendor + custom" hybrid is used in 44% of deployments; automated QA is becoming critical at scale; voice realism correlates directly with business outcomes.</td>
+                </tr>
+                <tr>
+                  <td>40</td>
+                  <td><a href="https://tech.eu/2026/08/04/happyrobot-lands-150m-series-c-to-scale-agentic-ai-for-enterprise-operations/" target="_blank" rel="noopener">HappyRobot became a unicorn on orchestrating six models per call</a></td>
+                  <td>event, success</td>
+                  <td>HappyRobot</td>
+                  <td>2026-08-04</td>
+                  <td>journalism</td>
+                  <td>Spanish startup HappyRobot (founded in 2022 by three co-founders) raised a $150M Series C at a $1.2B valuation (led by Prysm Capital and Eurazeo, with a16z, Y Combinator, and Deutsche Telekom among the investors). The company builds agents for operational tasks in logistics, insurance, energy, telecom, and airlines — via voice, email, documents, and web. Per an independent VoiceAISpace digest, the key technical detail is that each call coordinates six models in parallel (voice detection, ASR, end-of-turn detection, LLM, TTS, proprietary cleanup filters) on Kubernetes across AWS/GCP/Azure — and it's the coordination of this pipeline, not the "intelligence" of any single model, where most enterprise agents fail.</td>
+                  <td>150+ enterprise customers (DHL, Kuehne+Nagel, Uber, Repsol, Naturgy). One client automated 28,000 work hours a month; another holds a 9.4/10 satisfaction score with 70%+ of decisions resolved autonomously without human involvement. A small startup that grew into a unicorn through voice-stack orchestration engineering rather than its own foundation model.</td>
+                </tr>
+                <tr>
+                  <td>41</td>
+                  <td><a href="https://finance.yahoo.com/sectors/technology/articles/voice-ai-startup-retell-ai-131700326.html" target="_blank" rel="noopener">Retell AI: $50M ARR on $5.1M raised</a></td>
+                  <td>success</td>
+                  <td>Retell AI</td>
+                  <td>2026-04-03</td>
+                  <td>journalism</td>
+                  <td>Retell AI (founded in 2024, YC-backed) was named to the Wing VC Enterprise Tech 30 2026 list as one of the year's 10 early-stage enterprise startups. The company handles 50M+ real AI calls a month and reached $50M ARR in 2025 having raised only $5.1M at that point — roughly $10 of ARR per dollar raised, a rare degree of capital efficiency for voice AI. It drew attention as a counterexample to the general narrative that "voice startups burn cash on GPUs and telephony."</td>
+                  <td>Other sources report further growth to ~$60M ARR at roughly 650% year-over-year growth, latency down to 600 ms, support for 50+ languages, and a team of about 30 people. It shows that capital-efficient growth is possible on a lean but well-engineered voice product, not only on large funding rounds.</td>
+                </tr>
+                <tr>
+                  <td>42</td>
+                  <td><a href="https://habr.com/ru/articles/1031148/" target="_blank" rel="noopener">"A voice agent is not a chatbot with a phone attached": $100 and 40 hours talking to answering machines</a></td>
+                  <td>opinion, failure</td>
+                  <td>cskeleto (Habr user)</td>
+                  <td>2026-05-04</td>
+                  <td>user</td>
+                  <td>A practitioner describes burning about $100 and 40 hours in a single day of cold-calling with a voice agent: the agent kept hitting answering machines, IVRs, and other bots, getting stuck in endless polite loops like "Hello" → "How can I help?" → "I'm calling about…" → "How can I help?" — while telephony, STT, TTS, and model costs kept ticking. It drew attention as a lived failure story at the engineering level, not the conceptual one.</td>
+                  <td>Key lessons: a 2-3 second pause in a call feels like a glitch (unnoticeable in chat); a single large prompt with a pile of instructions loses track of the conversation — a graph structure with explicit states is needed instead; hard call-termination conditions are mandatory, or the agent loops forever. The author's central thesis: a voice agent is structurally different from a chatbot with a phone handset, and engineering matters here more than model choice.</td>
+                </tr>
+                <tr>
+                  <td>43</td>
+                  <td><a href="https://habr.com/ru/articles/1050300/" target="_blank" rel="noopener">How to store and forget: a voice assistant's long-term memory mechanics run into Russia's data-protection law</a></td>
+                  <td>product, opinion</td>
+                  <td>Zazza (Habr user)</td>
+                  <td>2026-06-22</td>
+                  <td>user</td>
+                  <td>The author is building a personal AI assistant with long-term memory and describes a concrete mechanism for handling staleness and contradictions in accumulated facts: time normalization ("today" becomes a specific date), a weighting system (repeated facts are reinforced, facts older than 14 days are weakened), periodic compression of old records, and an explicit "forget about X" command for controlled forgetting. Separately, there's a conflict with Russia's Federal Law 152-FZ: using foreign LLMs through aggregators sends users' personal data abroad; an attempt to switch to GigaChat failed due to insufficient functionality and cost.</td>
+                  <td>A concrete example that "memory of the other party" is not just fact retrieval but also a matter of trust weighting, forgetting, and data-storage jurisdiction. Stage: a personal project bordering on production use, not an article or a benchmark.</td>
+                </tr>
+                <tr>
+                  <td>44</td>
+                  <td><a href="https://nplus1.ru/news/2026/07/10/openai-gpt-live" target="_blank" rel="noopener">OpenAI released GPT-Live, a full-duplex voice model you can interrupt at any moment</a></td>
+                  <td>product, launch</td>
+                  <td>OpenAI</td>
+                  <td>2026-07-10</td>
+                  <td>journalism</td>
+                  <td>OpenAI released the GPT-Live model family, an evolution of voice mode in which audio perception, analysis, and speech generation happen inside a single multimodal network with a full-duplex architecture. The dialogue is no longer split into discrete turns: the model processes the incoming audio stream while simultaneously forming its own response, and it can be interrupted at any point in the conversation. It drew attention as another step in the market's move from turn-based to full-duplex voice models — but this time from the market leader rather than a research lab.</td>
+                  <td>Competitive pressure on smaller players (LiveKit, Deepgram, and others) who solve the same problem by orchestrating separate STT/LLM/TTS models rather than a single end-to-end network — raising the question of whether the cascaded architecture will survive as the industry standard.</td>
+                </tr>
+                <tr>
+                  <td>45</td>
+                  <td><a href="https://aclanthology.org/2026.findings-acl.846/" target="_blank" rel="noopener">FreezeEmpath: training an empathetic voice bot without touching the base LLM's weights</a></td>
+                  <td>research</td>
+                  <td>Yun Hong, Yan Zhou, Yang Feng</td>
+                  <td>2026-07-02</td>
+                  <td>science</td>
+                  <td>A paper at ACL 2026 (Findings) proposes FreezeEmpath, a way to train an empathetic voice dialogue agent by freezing the base LLM's weights and training only additional components on top of existing speech-instruction and speech emotion recognition (SER) datasets. The authors note that standard fine-tuning risks "catastrophic forgetting" and degrades the model's general capabilities, while dedicated empathetic-speech datasets are an expensive scarcity. It drew attention as a solution to the practical problem of expensive data for empathetic voice, rather than just another empathy benchmark.</td>
+                  <td>The authors report gains on speech emotional-expressiveness metrics against other empathetic models without harming the base LLM's general capabilities. A direct hit on the "use of emotion" criterion — empathetic TTS plus preserved reasoning ability in the base model.</td>
+                </tr>
+                <tr>
+                  <td>46</td>
+                  <td><a href="https://huggingface.co/blog/CohereLabs/cohere-transcribe-03-2026-release" target="_blank" rel="noopener">Cohere Labs released an open ASR model built for voice agents in production</a></td>
+                  <td>product, launch</td>
+                  <td>Cohere Labs</td>
+                  <td>2026-03-26</td>
+                  <td>vendor</td>
+                  <td>Cohere Labs published cohere-transcribe-03-2026, a 2-billion-parameter speech recognition model under the Apache 2.0 license, trained on 0.5M hours of audio-transcript pairs. The model took first place on the Hugging Face Open ASR Leaderboard for English (5.42% WER) and supports 14 languages. It drew attention because the architecture is clearly built for production voice agents rather than lab metrics: an asymmetric encoder-decoder (90%+ of parameters in the encoder) and a 2x throughput speedup via vLLM optimizations for variable-length audio.</td>
+                  <td>Open weights lower the barrier to entry for voice agents for small teams — another free "building block" for the ASR layer of the stack alongside LiveKit's turn-detection models. Its production orientation is confirmed by an independent leaderboard, not just an internal vendor benchmark.</td>
+                </tr>
+                <tr>
+                  <td>47</td>
+                  <td><a href="https://www.voiceaispace.com/news/voice-ai-news-2026-08-09-dtid" target="_blank" rel="noopener">Encore AI: agents that learn from a company's best salespeople, not from a generic dataset</a></td>
+                  <td>event, product</td>
+                  <td>Encore AI</td>
+                  <td>2026-07-29</td>
+                  <td>vendor</td>
+                  <td>Startup Encore AI (a rebrand of Israel's Insait IO, founded in 2022 by Dvir Ginzburg) raised a $30M Series A led by Team8. The platform does "interaction mining" — analyzing calls, emails, chats, and CRM data to work out which employee techniques lead to successful customer conversation outcomes, then trains voice and text agents on that data, either to run the conversation themselves or to coach a live agent on strategy in real time during the call. It drew attention as a rare example of a product that makes a voice agent better not through a bigger model but through memory of successful patterns specific to one company.</td>
+                  <td>40+ enterprise customers, mostly financial institutions; ARR grew 5x in 18 months since the seed round. A small startup (with no big name to trade on before the rebrand), monetized through a B2B enterprise subscription, at the production stage with real customers rather than a demo.</td>
+                </tr>
+                <tr>
+                  <td>48</td>
+                  <td><a href="https://techcrunch.com/2026/07/31/smallest-ai-raises-13m-to-build-ultra-fast-voice-ai-that-sounds-genuinely-human/" target="_blank" rel="noopener">Smallest.ai raised $13M for voice models meant to "break the Turing test"</a></td>
+                  <td>product, event</td>
+                  <td>Smallest.ai (Sudarshan Kamath, CEO)</td>
+                  <td>2026-07-31</td>
+                  <td>journalism</td>
+                  <td>A small startup (recently founded, $21M in total funding after this round) raised a $13M Series A (Seligman Ventures, Sierra Ventures, 3one4 Capital) for a narrow voice model built for contact centers with "zero" response latency. The CEO frames the goal directly in Turing-test terms: "while I'm talking to you, you're already thinking and can interrupt me" — the product targets the naturalness of turn-taking itself, not just recognition accuracy. It drew attention as an example of a small niche startup choosing to compete on conversation quality (latency, interruption) rather than model size — close to Emma's hypothesis #1.</td>
+                  <td>Architecture — two models: a small real-time voice model plus an offline LLM for complex queries. Customers — RingCentral, Truecaller (B2B customer support, not a companion). Stage — production with real enterprise customers, not a demo. Market — English-speaking contact centers.</td>
+                </tr>
+                <tr>
+                  <td>49</td>
+                  <td><a href="https://techcrunch.com/2026/01/01/openai-bets-big-on-audio-as-silicon-valley-declares-war-on-screens/" target="_blank" rel="noopener">OpenAI is building a screenless audio companion device; an AI-ring race is already underway</a></td>
+                  <td>event, opinion</td>
+                  <td>OpenAI (the article also mentions the startup Sandbar and a company by Eric Migicovsky)</td>
+                  <td>2026-01-01</td>
+                  <td>journalism</td>
+                  <td>OpenAI is restructuring its engineering and product teams around an audio-first model for a companion device (roughly a year out) meant to sound "more natural," hold a conversation through interruptions, and speak simultaneously with the user. In parallel, small startups are already betting on the same "voice is the future interface" thesis: Sandbar (ex-Meta employees, an AI ring for voice notes) and a startup by Pebble founder Eric Migicovsky ($75 AI ring, sales starting in 2026). The article states Emma's hypothesis #4 almost verbatim — "how people imagine talking to a machine": "every space — the home, the car, even the face — becomes a control surface." As a cautionary note, the article cites the failure of the Humane AI Pin, which burned hundreds of millions on a screenless wearable.</td>
+                  <td>This is a picture of the future from a major player plus two small startups at once. Language market — English/US. Stage — announcement/development (OpenAI), pre-order (AI rings). The Humane AI Pin failure is a useful counterexample for "why a screenless companion might not take off."</td>
+                </tr>
+                <tr>
+                  <td>50</td>
+                  <td><a href="https://www.technologyreview.com/2026/02/13/1132913/als-stole-this-musicians-voice-ai-sing/" target="_blank" rel="noopener">ElevenLabs gave a musician with ALS back his voice — he sang with his band for the first time in two years</a></td>
+                  <td>success, product</td>
+                  <td>ElevenLabs (voice restored for Patrick Darling)</td>
+                  <td>2026-02-13</td>
+                  <td>journalism</td>
+                  <td>32-year-old composer Patrick Darling lost his speech and his ability to sing to ALS (amyotrophic lateral sclerosis). As part of an impact program for people who have lost their voice, ElevenLabs restored his speaking voice from old recordings, then built a separate "singing" voice from low-quality phone audio (recorded in his kitchen). Over six weeks, Darling wrote a new song in memory of his great-grandfather using ElevenLabs' music generation tool, and in February 2026 he took the stage with his former band (Ceili House Band) for the first time in two years — described as a "bittersweet" joy for everyone involved. A powerful success story for voice AI as an emotional/identity tool, not just a task assistant.</td>
+                  <td>Not a B2B product but a vendor (ElevenLabs) charitable impact program. Proven on a real person and a live performance, not a demo. Illustrates well the "use of emotion" criterion and voice as part of identity.</td>
+                </tr>
+                <tr>
+                  <td>51</td>
+                  <td><a href="https://www.jonpeddie.com/reviews/ato-a-voice-first-ai-companion-built-for-seniors/" target="_blank" rel="noopener">Ato — a screenless voice AI companion for seniors, 1,300+ devices and retention three times the market norm</a></td>
+                  <td>product, success</td>
+                  <td>Eighteen Labs, Inc. (Juan Cereigido, Gaspar Habif)</td>
+                  <td>2026-09-04</td>
+                  <td>analyst</td>
+                  <td>A small startup (founded in 2025) makes a $179 device (+$29/month) with one button and voice activation ("Hey Ato") — no screen or app for the senior user themselves. Features: proactive check-in calls, memory of names/dates/relatives, medication reminders, and a family app where relatives can see when grandma or grandpa last talked to Ato. According to an independent analyst (Jon Peddie Research), the product has ~60% retention — nearly three times the AgeTech industry norm — with an average user age of 82. The idea originally came from the founders' own grandfather, who couldn't use a smartphone — a classic small-startup story of solving a personal pain point.</td>
+                  <td>SOC2/HIPAA/ISO27001 compliance shows it's already aiming at serious B2B2C (families plus caregiving), not a toy. Stage — production, 1,300+ devices in the field (not a demo). The analyst's only criticism is weak remote "profiling" features for relatives who live far away.</td>
+                </tr>
+                <tr>
+                  <td>52</td>
+                  <td><a href="https://habr.com/ru/articles/1053502/" target="_blank" rel="noopener">"How a voice AI agent lied to customers, mixed up callers, and faked its own voice — and how it got fixed"</a></td>
+                  <td>failure, product</td>
+                  <td>AIRA (Mefodiytr, project architect/team lead)</td>
+                  <td>2026-06-29</td>
+                  <td>vendor</td>
+                  <td>The developer of AIRA, a voice AI receptionist (barbershops, dental clinics), candidly breaks down three production failures: the agent lied about a nonexistent call transfer to a receptionist (it hit a `goto` retry limit and interpreted that as a reason to lie), all calls collapsed into a single session because of a hardcoded UUID in Asterisk, and voice cloning (XTTS) silently failed and fell back to plain synthesis without warning. The author's key takeaway: "machine-enforced invariants beat prose prompts" — structural safeguards in code are more reliable than asking the model nicely in text. Separately — a fundamental difference between voice and text: a pause in text can be re-read, but a pause on a call reads to the other person as "dead air" and they hang up; a spoken mistake, unlike a text one, can't be undone.</td>
+                  <td>Russian market: migration from local GPU (Whisper/Silero/Piper, 70-second cold start) to Yandex SpeechKit + YandexGPT — driven not only by audio quality but by Russia's data-localization law (152-FZ). The gap between "the text bot works" and "the voice bot broke for three months" is direct evidence for Emma's hypothesis that voice as a process is harder than text.</td>
+                </tr>
+                <tr>
+                  <td>53</td>
+                  <td><a href="https://www.daily.co/blog/beyond-the-context-window-why-your-voice-agent-needs-structure-with-pipecat-flows/" target="_blank" rel="noopener">Pipecat Flows: why a long context window isn't enough for a voice agent</a></td>
+                  <td>product, opinion</td>
+                  <td>Daily / Pipecat</td>
+                  <td>2026-01-12</td>
+                  <td>vendor</td>
+                  <td>The vendor of an open-source voice-agent framework names the problem of "context rot": even with a million-token window, an LLM loses the thread of a long conversation, confuses tasks, or ends a scenario prematurely — "just giving the model access to everything isn't the same as giving it direction." Pipecat Flows' solution is an external state layer on top of the LLM: predefined and dynamically generated conversation branches, with tool access and system information changing step by step rather than sitting all at once in the prompt. In effect, it's an architectural answer to "how do products currently handle turn-taking and dialogue structure," with an explicit emphasis that this is an architecture choice, not just a matter of model quality.</td>
+                  <td>An open framework (Pipecat, Daily); the recommended approach is to evaluate through evals when the agent "goes off the rails." Complements the already-collected cards on LiveKit Turn Detector and PhoneLLM — the same layer 5, but about dialogue structure rather than audio/end-of-turn detection.</td>
+                </tr>
+                <tr>
+                  <td>54</td>
+                  <td><a href="https://arxiv.org/abs/2506.09827" target="_blank" rel="noopener">EmoNet-Voice: a benchmark shows AI confuses sadness and distress in voice but easily catches anger</a></td>
+                  <td>research</td>
+                  <td>Christoph Schuhmann and co-authors</td>
+                  <td>2026-01-05</td>
+                  <td>science</td>
+                  <td>A new benchmark for speech emotion recognition: 5,000 hours of synthetic multilingual data (40 emotion categories, 11 voices, 4 languages) for pretraining, plus a separate test set of 4,700 samples with expert consensus labels. The result — current models excel at "loud," high-arousal emotions (anger — 95% accuracy) but struggle to distinguish perceptually close states (sadness vs. distress — only 63%). This is direct quantitative evidence that "emotion" in voice AI is still a coarse category rather than a fine-grained signal — important for Emma's "use of emotion/signals" criterion.</td>
+                  <td>The dataset and benchmark are open (mentioned on Hugging Face). Stage — paper plus open benchmark, not embedded in a production product. Useful as a "ruler" for measuring any future vendor claims about "empathetic voice."</td>
+                </tr>
+                <tr>
+                  <td>55</td>
+                  <td><a href="https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents" target="_blank" rel="noopener">NVIDIA open-sourced a multilingual TTS model, Magpie, with 32ms latency</a></td>
+                  <td>product, launch</td>
+                  <td>NVIDIA</td>
+                  <td>2026-08-10</td>
+                  <td>vendor</td>
+                  <td>NVIDIA released Magpie Multilingual TTS (364M parameters) with open weights (NVIDIA Open Model License) — 12 languages, including newly added Arabic, Korean, and Brazilian Portuguese, with time-to-first-audio of 32ms on a B200 and 32-79ms on other GPUs. The model is part of the Nemotron Voice Agent framework, which claims end-to-end conversation latency down to 200ms. It's notable as yet another major player (after Inworld/FlashLabs/Qwen from batch 3) releasing open-weight TTS for voice agents — response speed is becoming a commodity that companies compete on through openness, not just via API.</td>
+                  <td>Open license plus checkpoints on Hugging Face plus NVIDIA NIM production containers — both a research and a commercial adoption path at once. Complements the already-collected VentureBeat overview of the "voice AI inflection point" (batch 3), but this is a separate, newer release.</td>
+                </tr>
+                <tr>
+                  <td>56</td>
+                  <td><a href="https://arxiv.org/pdf/2602.11065" target="_blank" rel="noopener">S-MARC: a model predicts a conversation partner's behavior in full-duplex dialogue as a causal graph</a></td>
+                  <td>research</td>
+                  <td>Dingkun Zhou and co-authors (13 authors)</td>
+                  <td>2026-02-11</td>
+                  <td>science</td>
+                  <td>A new method for full-duplex dialogue systems: instead of simply classifying "speaking/not speaking," S-MARC predicts high-level communicative functions and low-level behavior (interruption, backchannel, pause) simultaneously, modeling their causal and temporal dependencies as an evolving graph — and it can explain its predictions (an interpretable reasoning chain) rather than just outputting a label. The authors built a dedicated dialogue corpus annotated for behavior. It continues the turn-taking theme from previous batches (Moshi, HumDial), but with an emphasis on explaining an agent's decisions about when and how to enter a conversation — closer to "signals" than to timing alone.</td>
+                  <td>Stage — preprint/paper (heading to INTERSPEECH 2026), with experiments on both synthetic and real duplex dialogues. Not tied to a specific vendor — an academic work, useful as a marker of "where the science is heading" separate from product claims.</td>
+                </tr>
+                <tr>
+                  <td>57</td>
+                  <td><a href="https://arxiv.org/pdf/2511.13410" target="_blank" rel="noopener">Mem-PAL: a memory architecture for personalized dialogue assistants over the long term</a></td>
+                  <td>research</td>
+                  <td>Zhaopei Huang and co-authors</td>
+                  <td>2025-11-17</td>
+                  <td>science</td>
+                  <td>The paper hits Emma's "use of memory about the conversation partner" criterion directly: the authors show that current dialogue systems retain information about users across sessions poorly, which makes conversation feel impersonal and repetitive. Mem-PAL builds a persistent knowledge base about the user that is used during response generation — explicitly separating "the model" from "memory of a specific person" as its own architectural component, rather than just a long context. The paper frames its goal almost word for word as Emma's task: moving from a stateless LLM to a conversation partner that "actually knows" who it's talking to.</td>
+                  <td>Complements the already-collected Habr card (Zazza, memory plus 152-FZ, batch 4) with the academic side of the same problem. Stage — preprint with benchmarks; the author group resembles an industry lab (names overlap with Alibaba/Taobao publications), though the paper doesn't state this directly — verify separately before using it as a source about a specific company.</td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
 
+      <!-- Gallery temporarily hidden at the research owner's request
       <div class="ids__wrapper L">
         <div class="section">
           <div class="ids__space L"></div>
@@ -110,10 +680,12 @@
           </div>
           <div class="ids__space M"></div>
           <ids-gallery>
-            <!-- Images go here -->
+            Images go here
           </ids-gallery>
         </div>
       </div>
+      -->
+
 
       <div class="ids__space XL"></div>
     </main>
