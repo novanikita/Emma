@@ -60,34 +60,70 @@
   color: var(--ids__text-caption);
 }
 
-.ids .prototype-button {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: var(--ids__color-white);
-  background: var(--ids__link);
-  border-radius: var(--ids__radius-m);
-  padding: calc(var(--ids__density) * 1em) calc(var(--ids__density) * 1.5em);
-  font-size: 1.4em;
-  line-height: var(--ids__density);
-  box-shadow: 0 0.3em 1.2em color-mix(in srgb, var(--ids__link) 40%, transparent);
-  transition:
-    background-color var(--ids__duration-base) var(--ids__easing-base),
-    box-shadow var(--ids__duration-base) var(--ids__easing-base);
+/* Фильтр библиотеки по тегу: теги-«пилюли» на мягкой подложке IDS, цвет
+   текста обычный, а не ссылочный. Выбранный тег инвертирован — тёмная заливка
+   в светлой теме и светлая в тёмной. */
+
+.library-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
 }
 
-.ids .prototype-button:hover {
-  color: var(--ids__color-white);
-  background: var(--ids__hover);
-  box-shadow: 0 0.4em 1.6em color-mix(in srgb, var(--ids__hover) 55%, transparent);
+.library-filter button {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45em;
+  font: inherit;
+  font-size: 0.8em;
+  line-height: var(--ids__density);
+  color: var(--ids__text);
+  background-color: var(--ids__surface);
+  border: none;
+  border-radius: var(--ids__radius-pill);
+  padding: 0.35em 0.95em;
+  cursor: pointer;
+  transition:
+    color var(--ids__duration-fast) var(--ids__easing-base),
+    background-color var(--ids__duration-fast) var(--ids__easing-base);
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--ids__text) 12%, var(--ids__surface));
+  }
+
+  &:focus-visible {
+    outline: var(--ids__border-width-m) solid var(--ids__link);
+    outline-offset: 2px;
+  }
+
+  &[aria-pressed="true"] {
+    color: var(--ids__background);
+    background-color: var(--ids__text);
+  }
+}
+
+.library-filter__count {
+  font-size: 0.85em;
+  color: var(--ids__text-caption);
+  font-variant-numeric: tabular-nums;
+
+  [aria-pressed="true"] > & {
+    color: color-mix(in srgb, var(--ids__background) 65%, transparent);
+  }
 }
 
 .ids h1.hero {
   font-size: 7.2em;
+  /* Базовый h1 использует line-height 1.0 — вплотную. На одной строке это
+     не заметно, но при переносе крупного заголовка на вторую строку буквы
+     с выносными элементами (g/y и h/b) соприкасаются. Совсем немного шире. */
+  line-height: 1.08;
 }
 
 @media (width < 768px) {
   .ids h1.hero {
-    font-size: 5.2em;
+    /* Самое длинное слово заголовка — «Research»: при 5.2em оно упиралось
+       в край экрана на 390px и вылезало за него на 320px. */
+    font-size: 4.6em;
   }
 }
